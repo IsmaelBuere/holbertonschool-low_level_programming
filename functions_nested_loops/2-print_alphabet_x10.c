@@ -15,5 +15,7 @@ void print_aplhabet_x10(void)
 			_putchar(o);
 		}
 		_putchar('\n');
+
+		z++;
 	}
 }
