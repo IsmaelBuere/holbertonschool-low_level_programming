@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "main.h"
 /**
- *main - void print aplhabet only use _putchar
- *
+ * print_alphabet - prints the english alphabet from a-z.
+ * Return: Nothing.
  */
 void print_alphabet(void)
 {
