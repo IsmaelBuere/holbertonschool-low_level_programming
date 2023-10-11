@@ -5,17 +5,17 @@
  */
 void print_aplhabet_x10(void)
 {
-	int z;
-	char o;
+	int c;
+	char i;
 
-	for (z = 0; z < 10; z++)
+	for (c = 0; c < 10; c++)
 	{
-		for (o = 'a'; o <= 'z'; o++)
+		for (i = 'a'; i <= 'z'; i++)
 		{
-			_putchar(o);
+			_putchar(i);
 		}
 		_putchar('\n');
 
-		z++;
+		c++;
 	}
 }
