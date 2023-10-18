@@ -1,20 +1,19 @@
 #include <stdio.h>
 /**
- *
- *
+ *prin_rev - take the function string.
+ *@s: value taken from main
+ *Return: 0
  */
 void print_rev(char *s)
 {
-	int leng = 0;
+	int leng;
 
-	while (s[leng] != '\0')
+	for (leng = 0; s[leng] != '\0'; leng++)
 	{
-		leng++;
 	}
-	
-	for (int i = leng - '1'; i >= '0'; i--)
+	for (leng = leng - 1; leng >= 0; leng--)
 	{
-		putchar(s[i]);
+		_putchar(s[leng]);
 	}
-	putchar('\n')
+	_putchar('\n');
 }
