@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *
- *
- *
+ *puts_half - print half of a string
+ *@str: value to evaluate
+ *Return: void
  */
 void puts_half(char *str)
 {
@@ -14,7 +14,7 @@ void puts_half(char *str)
 	if ((leng % 2) == 0)
 		n = leng / 2;
 
-	else 
+	else
 		n = (leng + 1) / 2;
 
 	for (i = n; i < leng; i++)
