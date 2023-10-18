@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
+ *puts2 - print every other character of a string
+ *@str: value to evaluate
+ *Return: void
  */
 void puts2(char *str)
 {
