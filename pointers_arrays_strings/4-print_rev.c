@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *prin_rev - take the function string.
+ *print_rev - take the function string.
  *@s: value taken from main
  *Return: 0
  */
