@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 /**
  *prin_rev - take the function string.
  *@s: value taken from main
