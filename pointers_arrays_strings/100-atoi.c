@@ -2,7 +2,7 @@
 /**
  *_atoi - converts a string to an integer.
  *@s:value to evaluate
- *Return: n * 1. 
+ *Return: n * 1.
  */
 int _atoi(char *s)
 {
@@ -22,4 +22,4 @@ int _atoi(char *s)
 	} while (*s++);
 
 	return (n * i);
-}i
+}
