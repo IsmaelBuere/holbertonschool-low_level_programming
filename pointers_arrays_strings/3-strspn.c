@@ -1,7 +1,9 @@
 #include "main2.h"
 /**
- *
- *
+ *_strspn - get the length of a prefix
+ *@s: initial segment
+ *@accept: accept bytes
+ *Return: (i)
  */
 unsigned int _strspn(char *s, char *accept)
 {
