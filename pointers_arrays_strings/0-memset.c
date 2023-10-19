@@ -1,17 +1,21 @@
 #include "main2.h"
 #include <stdio.h>
 /**
- *
- *
+ *_memset - print a function fill memory with a constant byte
+ *@s: starting address of memory to be filled
+ *@b: value to evalue
+ *@n: number of bytes changed
+ *Return: (s)
  */
 char *_memster(char *s, char b, unsigned int n)
 {
-	char *start = s;
-	
-	while (n-- > 0)
+	int i = 0;
+
+	while (n > 0)
 	{
-		*s = b;
-		s++;
+		s[i] = b;
+		i++;
+		n--;
 	}
-	return start;
+	return (s);
 }
