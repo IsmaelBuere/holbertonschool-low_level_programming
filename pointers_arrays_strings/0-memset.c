@@ -7,15 +7,12 @@
  *@n: number of bytes changed
  *Return: (s)
  */
-char *_memster(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0;
+	unsigned int i;
 
-	while (n > 0)
-	{
-		s[i] = b;
-		i++;
-		n--;
-	}
+	for (i = 0; i < n; i++)
+		*(s + i) =  b;
+
 	return (s);
 }
