@@ -5,32 +5,21 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int leng = 0;
-	int m;
+	unsigned int i, j, m;
 
-	while (*s)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		m = 0;
-		char *a = accept;
-
-		while (*a)
+		m = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
-			if (*s == *a) 
+			if (*(s + i) == *(accept + j))
 			{
-				m = 1;
+				m = 0;
 				break;
 			}
-			a++;
 		}
-
-		if (!m)
-		{
-			return (leng);
-		}
-
-		leng++;
-		s++;
+		if (m == 1)
+			break;
 	}
-
-	return (leng);
+	return (i);
 }
