@@ -1,9 +1,10 @@
 #include "main2.h"
 /**
- *
- *
- *
- *
+ *_strncat - concatenate two string
+ *@dest: value to evaluate
+ *@src: value to evaluate
+ *@n: value to evaluate
+ *Return: result
  */
 char *_strncat(char *dest, const char *src, int n)
 {
@@ -24,5 +25,5 @@ char *_strncat(char *dest, const char *src, int n)
 
 	*dest = '\0';
 
-	return result;
+	return (result);
 }
