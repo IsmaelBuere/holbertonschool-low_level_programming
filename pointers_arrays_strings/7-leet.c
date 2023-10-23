@@ -12,7 +12,7 @@ char *leet(char *str)
 
 	while (str[r1])
 	{
-		for (r2 = 0; r2 <= 7; r++)
+		for (r2 = 0; r2 <= 7; r2++)
 		{
 			if (str[r1] == leet[r2] ||
 			    str[r1] - 32 == leet[r2])
