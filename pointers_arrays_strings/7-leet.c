@@ -3,7 +3,7 @@
  * leet - Encodes a string to 1337.
  * @str: value to evaluate
  *
- * Return: void
+ * Return: (str)
  */
 char *leet(char *str)
 {
@@ -21,3 +21,6 @@ char *leet(char *str)
 
 		r1++;
 	}
+
+	return (str);
+}
