@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *main - adds positive numbers
+ *main - program that adds positive numbers
  *@argc: number of arguments
  *@argv: array of arguments
  *
- *Retunr: 0 on success or 1 on failure
+ *Return: 0 on success or 1 on failure
  */
 int main(int argc, char *argv[])
 {
