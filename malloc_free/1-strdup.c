@@ -21,7 +21,7 @@ char *_strdup(char *str)
 		i++;
 
 	i++;
-	strdup = malloc(sizeof(*str) *i);
+	strdup = malloc(sizeof(*str) * i);
 	if (strdup == NULL)
 	{
 		return (NULL);
@@ -33,5 +33,5 @@ char *_strdup(char *str)
 		j++;
 	}
 
-	return(strdup);
+	return (strdup);
 }
