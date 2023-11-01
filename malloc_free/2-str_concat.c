@@ -8,36 +8,28 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *strdup;
-	int i, j;
+	char *concat_str;
+	int i, concat_i = 0, l = 0;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
 
-	i = j = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[j] != '\0')
-		j++;
-	strdup = malloc(sizeof(char) * (i + j + 1));
-	if (strdup == NULL)
+	for (i = 0; s1[i] || s2[i]; i++)
+		l++;
+
+	concat_str = malloc(sizeof(char) * l);
+
+	if (concat_str == NULL)
 		return (NULL);
 
-	i = j = 0;
-	while (s1[1] != '\0')
-	{
-		strdup[i] = s1[i];
-		i++;
-	}
+	for (i = 0; s1[i]; i++)
+		concat_str[concat_i++] = s1[i];
 
-	while (s2[j] != '\0')
-	{ strdup[i] = s2[j];
-		i++, j++;
-	}
+	for (i = 0; s2[i]; i++)
+		concat_str[concat_i++] = s2[i];
 
-	strdup[i] = '\0';
-
-	return (strdup);
+	return (concat_str);
 }
