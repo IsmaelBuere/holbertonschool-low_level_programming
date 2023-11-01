@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ *_strdup - returns a pointer to newly allocated
+ *@str: string to copy
  *
- *
- *
- *
+ *Return: a array or NULL
  */
 char *_strdup(char *str)
 {
