@@ -1,9 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ *string_nconcat - concatenates two strigns 
+ *@s1: first string
+ *@s2: second string
+ *@n: value to evaluate
  *
- *
- *
+ *Return: (c)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
