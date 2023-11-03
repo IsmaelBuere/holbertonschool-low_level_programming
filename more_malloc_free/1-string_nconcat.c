@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- *string_nconcat - concatenates two strigns 
+ *string_nconcat - concatenates two strigns
  *@s1: first string
  *@s2: second string
  *@n: value to evaluate
