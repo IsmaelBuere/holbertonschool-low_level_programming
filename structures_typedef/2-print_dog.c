@@ -1,26 +1,28 @@
 #include <stdlib.h>
 #include "dog.h"
+#include <stdio.h>
 /**
  *
  *
  *
  *
  */
-struct dog 
-{ 
-	char *name;
-	float age;
-	char *owner;
-}
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
 		return;
 	}
-
-
-	printf("Name: %s\n", d->name ? d->name : "(nil)";
-	printf("Age: %.6f\n", d->age);
-	printf("Owner: %s\n", d->owner ? d-owner : "(nil)";
+	else 
+	{
+		if (d->name !=NULL)
+			printf("Name: %\s", d->name);
+		else 
+			printf("Name: (nill)\n");
+		printf("Age: %f\n", d->age);
+		if (d->owner != NULL)
+			printf("Owner: %s\n", d->owner);
+		else
+			printf("Owner: (nill)\n");
+	}
 }
