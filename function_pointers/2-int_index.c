@@ -6,7 +6,7 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	unsigned int i = 0;
 	
 	if (array == NULL || cmp == NULL || size <= 0)
 	{
