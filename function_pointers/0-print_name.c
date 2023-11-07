@@ -3,9 +3,10 @@
 /**
  *print_name - print a name
  *@name: name of the person
+ *@f: value to evaluate
  *Return: voiReturn: voidd
  */
-void print_name(char *name, void (*f)(char*))
+void print_name(char *name, void (*f)(char *))
 {
 	if (name != NULL && f != NULL)
 	f(name);
