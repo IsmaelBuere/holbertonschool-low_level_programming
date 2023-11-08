@@ -10,7 +10,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 
-	unsigned int i = 0; z, x = 0;
+	unsigned int i = 0, z, x = 0;
 	char *str;
 	const char t_args[] = "cifs";
 
