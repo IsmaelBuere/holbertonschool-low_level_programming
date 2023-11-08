@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include "3-calc.h"
 /**
- *
- *
- *
- *
+ *main - result of simple operations
+ *@argc: number of arguments
+ *@argv: array of pointers the arguments
+ *Return: (0)
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
