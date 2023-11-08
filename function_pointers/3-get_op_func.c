@@ -15,7 +15,7 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-	}
+	};
 	int s = 0;
 
 	while (ops[s].op != NULL && *(ops[s].op) != *s)
