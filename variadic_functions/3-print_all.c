@@ -2,64 +2,53 @@
 #include <stdio.h>
 #include <stdarg.h>
 /*
- *
- *
- *
+ *print_all - prints anything
+ *@format: list of types of arguments
+ *Return: void
  */
 void print_all(const char * const format, ...)
 {
 	va_list args;
 
-	char c;
-	int i;
-	float f;
-	char *s;
-
-	int f_a = 1;
-	char *separator = "";
+	unsigned int i, z, x = 0;
+	char *str;
+	const char t_args[] = "cifs";
 
 	va_start(args, format);
 
-	while (format && format[f_a - 1] != '\0')
+	while (format && format[i])
 	{
-		char c_f = format[f_a - 1];
-
-		if (c_f == 'c')
+		while (t_args[z])
 		{
-			c = va_arg(args, int);
-			printf("%s%c", separator, c);
-		}
-		else if (c_f == 'i')
-		{
-			i = va_arg(args, int);
-			printf("%s%d", separator, i);
-		}
-		else if (c_f == 'f')
-		{
-			f = (float)va_arg(args, double);
-			printf("%s%f", separator, f);
-		}
-		else if (c_f == 's')
-		{
-			s = va_arg(args, char *);
-			if (s == NULL)
+			if (format[i] == t_args[z] && x)
 			{
-				printf("%s(nil)", separator);
+				printf(", ");
+				break;
 			}
-			else
-			{
-				printf("%s%s", separator, s);
-			}
+			z++;
 		}
-
-		if (c_f == 'c' || c_f == 'i' || c_f == 'f' || c_f == 's')
+		switch (format[i])
 		{
-			separator = ", ";
+			case 'c':
+				printf("%c", va_arg(args, int)), x = 1;
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int)), x = 1;
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double)), x = 1;
+			case 's':
+				str = va_arg(args, char *), x = 1;
+				if (!str)
+				{
+					printf("(nil)");
+					break;
+				}
+				printf("%s", str);
+				break;
 		}
-
-		f_a++;
+		i++;
 	}
-
 	printf("\n");
 	va_end(args);
 }
