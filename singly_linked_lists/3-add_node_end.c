@@ -17,6 +17,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	new_node->str = strdup(str);
+
 	for (c = 0; str[c];)
 		c++;
 
@@ -24,7 +25,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node->len = c;
 	count = *head;
 
-	if (count == new_node)
+	if (count == NULL)
 	{
 		*head = new_node;
 	}
