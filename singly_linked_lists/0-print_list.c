@@ -2,16 +2,22 @@
 /**
  *print_list - prints elements of a list
  *@h: single linked list to print
- *Return: (n)
+ *Return: (count)
  */
 size_t print_list(const list_t *h)
 {
-	size_t i;
+	size_t count = 0;
 
-	for (i = 0; h; i++)
+	while (h)
 	{
-		printf("[%d] %s\n", h->len, h->str);
+		if (h->str == NULL)
+		{
+			printf("[0] (nill\n");
+		}
+		else
+			printf("[%d] %s\n", h->len, h->str);
+		count++;
 		h = h->next;
 	}
-	return (i);
+	return (count);
 }
