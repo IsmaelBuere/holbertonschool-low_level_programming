@@ -19,10 +19,10 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	count = 0;
 	for (i = 0; i < current; i++)
 	{
-		bit1 = n & 1;
-		bit2 = m & 1;
+		bit_1 = n & 1;
+		bit_2 = m & 1;
 
-		if (bit1 != bit2)
+		if (bit_1 != bit_2)
 			count++;
 
 		n >>= 1;
