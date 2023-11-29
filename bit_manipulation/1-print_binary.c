@@ -21,3 +21,4 @@ void print_binary(unsigned long int n)
 	count++;
 	print_binary(n >>= 1);
 	_putchar('0' +  i);
+}
