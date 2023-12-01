@@ -15,15 +15,17 @@ int create_file(const char *filename, char *text_content)
 	c = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (c == -1)
 		return (-1);
+
 	if (text_content != NULL)
 	{
-		tmp = 0;
-		while (*(text_content + tmp) != '\0')
-			tmp++;
+		tmp = strlen(text_content);
+
 		r_w = write(c, text_content, tmp);
+		
 		if (r_w == -1)
 		{
-			write(1, "fails", 6);
+			write(STDERR_FILENO, "fails", 6);
+			close(c)
 			return (-1);
 		}
 	}
