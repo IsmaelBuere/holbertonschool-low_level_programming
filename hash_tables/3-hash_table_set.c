@@ -1,12 +1,12 @@
 #include "hash_tables.h"
 
 /**
-  * hash_table_set - a function that adds an element to the hash table.
+  * hash_table_set - Adds an element to the hash table
   * @ht: The hash table to add or update the key/value to
   * @key: The key of a value
   * @value: The value associated with the key
   *
-  * Return: (1)
+  * Return: 1 if it succeeded, 0 otherwise
   */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -19,10 +19,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	i = key_index((unsigned char *) key, ht->size);
 	c_n = ht->array[i];
 
-	if (c_n && strcmp((key,*c_n->key) == 0))
+	if (c_n && strcmp(key, c_n->key) == 0)
 	{
-		free*(c_n->value);
-	c_n->value = strdup(value);
+		free(c_n->value);
+		c_n->value = strdup(value);
 		return (1);
 	}
 
