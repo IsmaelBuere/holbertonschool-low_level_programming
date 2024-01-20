@@ -10,7 +10,7 @@
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i;
+	size_t i, left = 0, right = size - 1;
 
 	if (array == NULL)
 	{
@@ -26,9 +26,7 @@ int binary_search(int *array, size_t size, int value)
 		}
 	}
 	printf("\n");
-
-	size_t left = 0, right = size - 1;
-
+	
 	while (left <= right)
 	{
 
